@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+env/
+
+# run outputs
+unipocket_out/
+results/
+*.npz
+!checkpoints/*.npz
+rcsb_cache/
+
+# ESM2 weights are cached by torch.hub, never committed
+torch_hub/
+*.pt
+!checkpoints/unipocket_esm2_650M.pt
+
+.DS_Store
+examples/output/
