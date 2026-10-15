@@ -10,7 +10,7 @@ probabilities:
 
 | Head | Question it answers | Trained on |
 |---|---|---|
-| **CRY** | Does this residue line a *cryptic* pocket — one that is closed in the apo structure and opens on ligand binding? | CryptoBench |
+| **CRY** | Does this residue line a cryptic pocket — one that is closed in the apo structure and opens on ligand binding? | CryptoBench |
 | **LIG** | Does this residue contact a ligand in a holo structure? | RCSB holo complexes (5 Å cutoff) |
 
 On the CryptoBench held-out test set the CRY head reaches **0.816 ROC-AUC** and
@@ -135,20 +135,4 @@ ESM2 has a 1024-token context. Longer chains are handled by `--long-mode`:
 `summary.csv` flags any entry where `n_residues < n_input_residues`.
 
 ---
-
-## Reproducing the published numbers
-
-```bash
-unipocket <input> --standard-only --long-mode truncate --keep-ca-less
-```
-
-with all chains concatenated (i.e. without `--per-chain`). That combination
-reproduces the residue selection of the benchmark scripts exactly, and was
-checked to be **bit-identical** — max absolute difference 0.0 on both heads —
-against the reference implementation in
-`supplementary/gen_pocketminer_external.py`, both on 1AKE and on a
-deliberately awkward variant carrying a selenomethionine and a residue with no
-Cα. The defaults differ from that path only in ways the paper never exercised:
-they recover MSE as methionine, drop unresolved residues, and window past the
-1022-residue limit instead of truncating.
 
