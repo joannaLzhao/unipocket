@@ -8,10 +8,12 @@ version = "0.1.0"
 description = "Per-residue cryptic-pocket and ligand-binding prediction from ESM2 embeddings"
 readme = "README.md"
 requires-python = ">=3.9"
+license = { text = "MIT" }
 authors = [{ name = "Lening Zhao", email = "lnzhao@seas.upenn.edu" }]
 keywords = ["protein", "cryptic pocket", "ligand binding", "ESM2", "drug discovery"]
 classifiers = [
     "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]

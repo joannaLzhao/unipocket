@@ -172,3 +172,10 @@ UniPocket builds on ESM2:
 
 > Lin et al. Evolutionary-scale prediction of atomic-level protein structure
 > with a language model. *Science* 379, 1123-1130 (2023).
+
+---
+
+## License
+
+MIT - see [LICENSE](LICENSE). The ESM2 weights this pipeline downloads at
+runtime are distributed separately by Meta AI under the MIT license.
