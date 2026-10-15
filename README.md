@@ -1,7 +1,14 @@
 # UniPocket
 
+[![Paper](https://img.shields.io/badge/Paper-ACM%20BCB%20'26-0085CA)](https://doi.org/10.1145/3807503.3819482)
+[![DOI](https://img.shields.io/badge/DOI-10.1145%2F3807503.3819482-004B87)](https://doi.org/10.1145/3807503.3819482)
+
 Per-residue **cryptic-pocket** and **ligand-binding** prediction for any protein
 structure, from sequence alone.
+
+Reference implementation for
+[*UniPocket: Unified Ligand and Cryptic Pocket Prediction from Protein Language
+Model Embeddings*](https://doi.org/10.1145/3807503.3819482), ACM-BCB 2026.
 
 UniPocket is a small two-head network over ESM2-650M per-residue embeddings. It
 needs no MSA, no docking, no molecular dynamics and no pocket-detection
@@ -136,3 +143,32 @@ ESM2 has a 1024-token context. Longer chains are handled by `--long-mode`:
 
 ---
 
+## Citation
+
+> Lening Zhao, Tianhua Zhai, and Li Shen. 2026. UniPocket: Unified Ligand and
+> Cryptic Pocket Prediction from Protein Language Model Embeddings. In
+> *Proceedings of the 17th ACM International Conference on Bioinformatics,
+> Computational Biology and Health Informatics* (BCB '26), Rende (CS), Italy.
+> ACM, 1-9. https://doi.org/10.1145/3807503.3819482
+
+```bibtex
+@inproceedings{zhao2026unipocket,
+  author    = {Zhao, Lening and Zhai, Tianhua and Shen, Li},
+  title     = {UniPocket: Unified Ligand and Cryptic Pocket Prediction from
+               Protein Language Model Embeddings},
+  booktitle = {Proceedings of the 17th ACM International Conference on
+               Bioinformatics, Computational Biology and Health Informatics},
+  series    = {BCB '26},
+  year      = {2026},
+  pages     = {1--9},
+  publisher = {ACM},
+  address   = {Rende (CS), Italy},
+  doi       = {10.1145/3807503.3819482},
+  url       = {https://doi.org/10.1145/3807503.3819482}
+}
+```
+
+UniPocket builds on ESM2:
+
+> Lin et al. Evolutionary-scale prediction of atomic-level protein structure
+> with a language model. *Science* 379, 1123-1130 (2023).
